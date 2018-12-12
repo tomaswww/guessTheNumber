@@ -1,17 +1,20 @@
 // Model
-var diffOpt = ["easy peasy","not that simple","hmm","wow dude slow down"];
+var diffOpt = ["easy peasy", "not that simple", "hmm", "wow dude slow down"];
 
 
 // Controller
 
-function renderDif(){
-diffOpt
-
-}
+function renderDif(x) {
+  x.forEach(function(element) {
+    var newDif = document.createElement("li");
+    newDif.innerHTML = element;
+    var wtf = document.getElementById("listDif")
+    wtf.appendChild(newDif);
+  });
+};
 
 
 // Difficulty View
-var diffSelect = document.getElementById("diffOPtions");
-diffSelect.createElement("li");
+renderDif(diffOpt);
 
 //  Game panel View
