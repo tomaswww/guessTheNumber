@@ -1,3 +1,25 @@
 body {
   font-family: 'ZCOOL KuaiLe', cursive;
-};
+}
+
+#headerContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:100%;
+  justify-content: center;
+}
+
+ #wcm{
+  padding-right:30px;
+  order:1
+}
+
+ #ttle{
+  order:2
+}
+
+
+#diffHeading {
+  
+}
