@@ -2,20 +2,21 @@ body {
   font-family: 'ZCOOL KuaiLe', cursive;
 }
 
+/* header style things */
 #headerContainer {
   background-color: #c3c3f1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 
 #wcm {
   padding: 30px;
-    background: #ecc3c3;
-    border-top-left-radius: : 1em;
-    transform: rotate(-5deg);
+  background: #ecc3c3;
+  border-top-left-radius: : 1em;
+  transform: rotate(-5deg);
   order: 1
 }
 
@@ -27,8 +28,39 @@ body {
   order: 2;
 }
 
-#diffHeading {}
+/* body style things */
+/* footer style things */
+footer {
+  background-color: #2a1ee926;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
-  li{
-    list-style-type:none
-  }
+#aboutAuthor {
+  text-align: center;
+  width: 100%;
+}
+
+#socialMedia {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  padding: 0%;
+}
+
+#sMI {
+  width: 5%;
+  padding: 0px 5% 0px 5%;
+}
+
+li {
+  list-style-type: none
+}
+
+li img {
+  width: 100%
+}
