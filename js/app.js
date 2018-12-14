@@ -1,5 +1,7 @@
 // Model
 var diffOpt = ["easy peasy", "not that simple", "wow dude slow down"];
+var currentDif = "easy peasy";
+var numberToGuess = 5;
 
 
 // Controller
@@ -16,11 +18,11 @@ function renderDif(array) {
     newDif.innerHTML = element;
     newDif.addEventListener("click", function() {
       difSelected(newDif, array);
-      renderGame(newDif);
+      renderDifGame(newDif);
     });
     document.getElementById("myDropdown").appendChild(newDif);
   })
-}
+};
 
 // get the dificulty selected on the diffuculty panel
 function difSelected(level,array) {
@@ -35,12 +37,53 @@ function difSelected(level,array) {
   })
 };
 
-// get the game render according to difficulty selected
 
+// get the game render according to difficulty selected
+function renderDifGame(newDif){
+currentDif = newDif;
+renderGame();
+};
 
 // game panel
 
+function renderGame() {
+  var currentDi = document.getElementsByClassName("selected");
 
+  if (currentDi==="easy peasy"){
+    max=10;
+    min=1;
+    numberToGuess=(int)(Math.random()*((max-min)+1))+min;
+    return numberToGuess;
+  }
+  else if (currentDi==="not that simple"){
+    max=100;
+    min=1;
+    numberToGuess=(int)(Math.random()*((max-min)+1))+min;
+    return numberToGuess;
+  }
+  else if (currentDi==="wow dude slow down"){
+    max=1000;
+    min=1;
+    numberToGuess=(int)(Math.random()*((max-min)+1))+min;
+    return numberToGuess;
+  }
+};
+
+// check guess!
+function initializeGame(){
+  var buttonGuess = document.getElementById("guessBtn");
+  buttonGuess.addEventListener("click",function(inpNum){
+    if (inpNum===numberToGuess){
+      console.log("you've guessed it man!");
+    }
+    else if (inpNum>numberToGuess){
+      console.log("Higher!");
+    }
+    else {
+      console.log("lower!");
+    }
+  })
+};
 
 
 // Difficulty View
