@@ -3,23 +3,28 @@ body {
 }
 
 #headerContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width:100%;
-  justify-content: center;
+  background-color: #c3c3f1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
 }
 
- #wcm{
-  padding-right:30px;
-  order:1
+#wcm {
+  padding: 30px;
+    background: #ecc3c3;
+    border-radius: 1em;
+    transform: rotate(-5deg);
+  order: 1
 }
 
- #ttle{
-  order:2
+#ttle {
+  background: #c3ecdc;
+  padding: 20px 15px 30px 15px;
+  border-radius: 2em;
+  transform: rotate(5deg);
+  order: 2;
 }
 
-
-#diffHeading {
-  
-}
+#diffHeading {}
