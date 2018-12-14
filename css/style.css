@@ -14,7 +14,7 @@ body {
 #wcm {
   padding: 30px;
     background: #ecc3c3;
-    border-radius: 1em;
+    border-top-left-radius: : 1em;
     transform: rotate(-5deg);
   order: 1
 }
@@ -28,3 +28,7 @@ body {
 }
 
 #diffHeading {}
+
+  li{
+    list-style-type:none
+  }
