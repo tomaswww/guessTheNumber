@@ -2,7 +2,8 @@
 var diffOpt = ["easy peasy", "not that simple", "wow dude slow down"];
 var currentDif = "easy peasy";
 var numberToGuess = 5;
-
+var min=1;
+var max=100;
 
 // Controller
 
@@ -47,25 +48,21 @@ renderGame();
 // game panel
 
 function renderGame() {
-  var currentDi = document.getElementsByClassName("selected");
-
-  if (currentDi==="easy peasy"){
+ const currentDi = document.querySelector(".selected").innerHTML;
+  if (currentDi === "easy peasy"){
     max=10;
     min=1;
-    numberToGuess=(int)(Math.random()*((max-min)+1))+min;
-    return numberToGuess;
-  }
-  else if (currentDi==="not that simple"){
+    return numberToGuess=Math.round((Math.random()*((max-min)+1))+min);
+      }
+  else if (currentDi === "not that simple"){
     max=100;
     min=1;
-    numberToGuess=(int)(Math.random()*((max-min)+1))+min;
-    return numberToGuess;
+    return numberToGuess=Math.round((Math.random()*((max-min)+1))+min);
   }
-  else if (currentDi==="wow dude slow down"){
+  else if (currentDi === "wow dude slow down"){
     max=1000;
     min=1;
-    numberToGuess=(int)(Math.random()*((max-min)+1))+min;
-    return numberToGuess;
+    return numberToGuess=Math.round((Math.random()*((max-min)+1))+min);
   }
 };
 
@@ -89,3 +86,4 @@ function initializeGame(){
 // Difficulty View
 renderDif(diffOpt);
 //  Game panel View
+initializeGame();
