@@ -7,25 +7,10 @@ var diffOpt = ["easy peasy", "not that simple", "hmm", "wow dude slow down"];
 
 // difficulty panel
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+// when difficulty gets selected: 1-panel should render to game diff; 2-display on sidenav should show actual level
+// add event listener to drop btn to renders
 
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+
 
 // game panel
 
