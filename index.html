@@ -19,10 +19,28 @@
   </header>
 
   <main>
-    <div class="diffContainer">
+    <div id="mainPanel">
+    <div class="sidenav">
+    <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Difficulty</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">easy peasy</a>
+    <a href="#">not that simple</a>
+    <a href="#">wow dude slow down</a>
+  </div>
+</div>
+</div>
+    <!-- <div id="diffContainer">
       <h4 id="diffHeading">Select difficulty:</h4>
       <ul id="listDif"></ul>
+    </div> -->
+    <div id="gamePanel">
+      <form action="">
+  Insert number: <input type="text" name="inpNum">
+  <input type="submit" value="Guess!" id="guessBtn">
+</form>
     </div>
+</div>
   </main>
   <footer>
     <div id="aboutAuthor">
