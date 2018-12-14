@@ -1,5 +1,14 @@
 body {
   font-family: 'ZCOOL KuaiLe', cursive;
+  height: 100%;
+  width: 100%;
+}
+
+#mainPanel {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
 }
 
 /* header style things */
@@ -29,8 +38,21 @@ body {
 }
 
 /* body style things */
+/* side nav bar */
+#displayForDiff {
+  margin-top: 10%;
+  color: white;
+  background-color: #444444;
+  border-radius: 1em;
+  text-align: center;
+}
 
 /* dropdown menu */
+.sidenav {
+  width: 20%;
+  order: -1;
+  background-color: #c3ecdc;
+}
 
 /* Dropdown Button */
 .dropbtn {
@@ -40,6 +62,7 @@ body {
   font-style: normal;
   font-family: 'ZCOOL KuaiLe', cursive;
   font-size: 2vw;
+  text-align: center;
 }
 
 /* Dropdown button on hover & focus */
@@ -59,7 +82,7 @@ body {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -72,29 +95,35 @@ body {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
+.dropdown-content a:hover {
+  background-color: #ddd
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {
+  display: block;
+}
 
 /* game panel */
 #gamePanel {
+  margin:5% 5% 0% 5%;
+  padding:5% 0% 5% 0%; 
+  align-items: center;
+  order: 2;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width:100%;
+  width: 50%;
   justify-content: center;
   background-color: #e6c3c3;
   border-radius: 0.5em;
   font-size: 2vw;
 }
 
-
 #guessBtn {
   font-family: 'ZCOOL KuaiLe', cursive;
   font: 400 40px system-ui;
 }
-
 
 /* footer style things */
 footer {
