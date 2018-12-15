@@ -4,7 +4,7 @@ var currentDif = "easy peasy";
 var min;
 var max;
 var inpNum;
-
+var numberToGuess;
 
 // Controller
 
@@ -50,8 +50,7 @@ function renderDifGame(newDif) {
 
 function renderGame() {
   const currentDi = document.querySelector(".selected").innerHTML;
-  var numberToGuess;
-  if (currentDi === "easy peasy") {
+    if (currentDi === "easy peasy") {
     max = 10;
     min = 1;
     return numberToGuess = Math.round((Math.random() * ((max - min) + 1)) + min);
