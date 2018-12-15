@@ -1,8 +1,10 @@
 // Model
 var diffOpt = ["easy peasy", "not that simple", "wow dude slow down"];
 var currentDif = "easy peasy";
-var min = 1;
-var max = 100;
+var min;
+var max;
+var inpNum;
+
 
 // Controller
 
@@ -48,6 +50,7 @@ function renderDifGame(newDif) {
 
 function renderGame() {
   const currentDi = document.querySelector(".selected").innerHTML;
+  var numberToGuess;
   if (currentDi === "easy peasy") {
     max = 10;
     min = 1;
@@ -62,14 +65,6 @@ function renderGame() {
     return numberToGuess = Math.round((Math.random() * ((max - min) + 1)) + min);
   }
 };
-
-// init game variables
-(function init(){
-   var inpNum = 0;
-  var numberToGuess =1;
-  return inpNum;
-  numberToGuess;
-})();
 
 // check guess!
  function checkWin(inpNum) {
