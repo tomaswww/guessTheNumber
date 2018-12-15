@@ -1,9 +1,8 @@
 // Model
 var diffOpt = ["easy peasy", "not that simple", "wow dude slow down"];
 var currentDif = "easy peasy";
-var numberToGuess = 5;
-var min=1;
-var max=100;
+var min = 1;
+var max = 100;
 
 // Controller
 
@@ -26,7 +25,7 @@ function renderDif(array) {
 };
 
 // get the dificulty selected on the diffuculty panel
-function difSelected(level,array) {
+function difSelected(level, array) {
   array.forEach(function(element) {
     var loopDif = document.getElementById(element)
     var compTwo = level.id;
@@ -40,50 +39,53 @@ function difSelected(level,array) {
 
 
 // get the game render according to difficulty selected
-function renderDifGame(newDif){
-currentDif = newDif;
-renderGame();
+function renderDifGame(newDif) {
+  currentDif = newDif;
+  renderGame();
 };
 
 // game panel
 
 function renderGame() {
- const currentDi = document.querySelector(".selected").innerHTML;
-  if (currentDi === "easy peasy"){
-    max=10;
-    min=1;
-    return numberToGuess=Math.round((Math.random()*((max-min)+1))+min);
-      }
-  else if (currentDi === "not that simple"){
-    max=100;
-    min=1;
-    return numberToGuess=Math.round((Math.random()*((max-min)+1))+min);
-  }
-  else if (currentDi === "wow dude slow down"){
-    max=1000;
-    min=1;
-    return numberToGuess=Math.round((Math.random()*((max-min)+1))+min);
+  const currentDi = document.querySelector(".selected").innerHTML;
+  if (currentDi === "easy peasy") {
+    max = 10;
+    min = 1;
+    return numberToGuess = Math.round((Math.random() * ((max - min) + 1)) + min);
+  } else if (currentDi === "not that simple") {
+    max = 100;
+    min = 1;
+    return numberToGuess = Math.round((Math.random() * ((max - min) + 1)) + min);
+  } else if (currentDi === "wow dude slow down") {
+    max = 1000;
+    min = 1;
+    return numberToGuess = Math.round((Math.random() * ((max - min) + 1)) + min);
   }
 };
 
+// init game variables
+(function init(){
+   var inpNum = 0;
+  var numberToGuess =1;
+  return inpNum;
+  numberToGuess;
+})();
+
 // check guess!
-function initializeGame(){
-  var buttonGuess = document.getElementById("guessBtn");
-  buttonGuess.addEventListener("click",function(inpNum){
-    if (inpNum===numberToGuess){
+ function checkWin(inpNum) {
+   var luckyNum= inpNum;
+    if (luckyNum === numberToGuess) {
       console.log("you've guessed it man!");
-    }
-    else if (inpNum>numberToGuess){
-      console.log("Higher!");
-    }
-    else {
+    } else if (luckyNum > numberToGuess) {
       console.log("lower!");
+    } else if (luckyNum < numberToGuess) {
+      console.log("higher!");
+    } else {
+      console.log("soms wrong dude...");
     }
-  })
-};
+  };
 
 
 // Difficulty View
 renderDif(diffOpt);
 //  Game panel View
-initializeGame();
