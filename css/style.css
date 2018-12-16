@@ -62,8 +62,9 @@ body {
   border: none;
   cursor: pointer;
   font-style: normal;
+  text-decoration: underline;
   font-family: 'ZCOOL KuaiLe', cursive;
-  font-size: 2vw;
+  font-size: 3vw;
   text-align: center;
 }
 
