@@ -79,6 +79,24 @@ function renderGame() {
     }
   };
 
+// game board for nums tried
+function numTried(arrayOfTries){
+// must define array and get nums once entered in this arrayOfTries!
+var gameBoardDisplay = document.getElementById("numTried");
+gameBoardDisplay.innerHTML = ("You've already tried: "+arrayOfTries.toString());
+}
+
+
+// game board for attempts
+function attTried(arrayOfTries){
+// must define array and get nums once entered in this arrayOfTries!
+var gameBoardAtt = document.getElementById("numAttempts");
+gameBoardAtt.innerHTML = ("You've already tried: "+arrayOfTries.lenght()+" times.");
+// after i get this working with an if I must correct the 1 times syntax error
+}
+
+
+
 
 // Difficulty View
 renderDif(diffOpt);
