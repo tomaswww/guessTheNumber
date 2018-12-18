@@ -90,6 +90,7 @@ li:hover, li:focus {
   order: 2;
   width: 80%;
   align-items: center;
+  text-align: center;
   background-color: #e6c3c3;
   border-radius: 0.5em;
   font-size: 2vw;
