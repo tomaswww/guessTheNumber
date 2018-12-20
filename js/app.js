@@ -6,6 +6,7 @@ var max;
 var inpNum;
 var numberToGuess;
 
+
 // Controller
 
 
@@ -67,6 +68,7 @@ function renderGame() {
 
 // check guess!
  function checkWin(inpNum) {
+  var insertNum = request.getParameter("inpNum");
    var luckyNum= inpNum;
     if (luckyNum === numberToGuess) {
       console.log("you've guessed it man!");
